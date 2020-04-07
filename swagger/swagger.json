@@ -1,0 +1,13 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": null,
+    "definitions": {
+        "models.Wmfood": {
+            "title": "Wmfood",
+            "type": "object"
+        }
+    }
+}
