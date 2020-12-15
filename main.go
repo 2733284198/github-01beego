@@ -1,14 +1,17 @@
 package main
 
 import (
-	"bee01/controllers"
-	_ "bee01/controllers"
-	_ "bee01/routers"
 	"github.com/astaxie/beego"
+
+	//_ "bee01/controllers"
+	_ "bee01/routers"
 )
 
 func main() {
 
-	beego.Router("/user", &controllers.MainController{})
-	beego.Run()
+	//beego.Router("/user", &controllers.MainController{})
+	//beego.Router("/food", &controllers.WmfoodController{})
+
+	beego.Run(":8089")
+
 }

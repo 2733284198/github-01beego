@@ -11,11 +11,18 @@ type WmfoodController struct {
 
 // URLMapping ...
 func (c *WmfoodController) URLMapping() {
+	c.Mapping("Get", c.Get)
 	c.Mapping("Post", c.Post)
 	c.Mapping("GetOne", c.GetOne)
 	c.Mapping("GetAll", c.GetAll)
 	c.Mapping("Put", c.Put)
 	c.Mapping("Delete", c.Delete)
+}
+
+//func (c *MainController) Get() {
+func (c *WmfoodController) Get() {
+	c.Ctx.WriteString("food world 1")
+
 }
 
 // Post ...
