@@ -10,7 +10,13 @@ func init() {
 
 	beego.Router("/food", &controllers.WmfoodController{})
 
+	// user
+	beego.Router("/user/jump", &controllers.UserController{}, "get:Jump")
+
 	beego.Router("/user", &controllers.UserController{})
+	beego.Router("/user/:id", &controllers.UserController{}, "get:Getuid")
+	beego.Router("/user/:id([0-9]+).html", &controllers.UserController{}, "get:Getuidhtml")
+
 	beego.Router("/user/json", &controllers.UserController{}, "get:GetOne")
 	beego.Router("/user/add", &controllers.UserController{}, "post:DoAdd")
 

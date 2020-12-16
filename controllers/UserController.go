@@ -51,6 +51,15 @@ func (c *UserController) Pay() {
 	//c.TplName = "user/pay.html"
 }
 
+func (c *UserController) Jump() {
+	//c.Redirect("www.baidu.com", 303)
+	//c.Redirect("/user/pay", 200)
+	c.Redirect("www.baidu.com", 200)
+
+	//c.TplName = "user/pay.xml"
+	//c.TplName = "user/pay.html"
+}
+
 // 处理xml内容，支付宝，微信返回结果处理
 
 /* postman: 发送 post, xml的内容，
@@ -133,6 +142,30 @@ func (c *UserController) GetOne() {
 
 	c.Data["json"] = u
 	c.ServeJSON()
+}
+
+func (c *UserController) Getuid() {
+	//uid := c.Ctx.Input.Param(":id")
+	uid := c.Ctx.Input.Param(":id") // :id，要加签名的:
+
+	//u := models.User{
+	//	Username: "张三",
+	//	Password: "123456",
+	//}
+
+	// todo:返回 json的值
+	c.Ctx.WriteString(uid)
+
+	//c.Data["json"] = uid
+	//c.ServeJSON()
+}
+
+func (c *UserController) Getuidhtml() {
+	//uid := c.Ctx.Input.Param(":id")
+	uid := c.Ctx.Input.Param(":id") // :id，要加签名的:
+
+	// todo:返回 json的值
+	c.Ctx.WriteString(uid)
 }
 
 func (c *UserController) AddFood() {
