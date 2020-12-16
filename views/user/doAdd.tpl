@@ -8,12 +8,12 @@
 <body>
     <p>User-doAdd
 
-    <form>
-        <input type="text" name="username">
-        <input type="text" name="password">
-
-        <button ></button>
+    <form action="/user/add" method="post">
+        用户名：<input type="text" name="username"> <br> <br>
+        密码：<input type="text" name="password"> <br> <br>
+        <input type="submit" value="提交">
     </form>
+
 </body>
 
 </html>

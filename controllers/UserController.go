@@ -46,7 +46,8 @@ func (c *UserController) Get() {
 
 // pay,xml支付宝，微信返回类型
 func (c *UserController) Pay() {
-	c.TplName = "user/pay.tpl"
+	c.TplName = "user/doAdd.tpl"
+	//c.TplName = "user/pay.tpl"
 	//c.TplName = "user/pay.xml"
 	//c.TplName = "user/pay.html"
 }
@@ -93,33 +94,31 @@ func (c *UserController) Xml() {
 }
 
 func (c *UserController) PayCallback() {
-	article := models.Article{}
+	user := models.User{}
 
-	fmt.Printf("%s", article)
+	fmt.Printf("%s", user)
 
 	//err := Unmarshaler
 }
 
 //func (c *UserController) doAdd() {
-func (c *UserController) DoAdd() {
+func (c *UserController) AddForm() {
+	c.Data["title"] = "AddForm"
+	c.TplName = "user/doAdd.tpl"
+}
 
-	//c.Ctx.WriteString("do add")
+func (c *UserController) Doadd() {
+	u := models.User{}
 
-	p := models.Product{}
-
-	err := c.ParseForm(&p)
-	if err == nil {
+	err := c.ParseForm(&u)
+	if err != nil {
 		c.Ctx.WriteString("参数错误")
 		return
 	}
 
-	//fmt.Println(p)
-	fmt.Printf("%s", p)
-	//beego.Info(p)
-
-	//c.Ctx.WriteString(p)
-	c.Ctx.WriteString("do add")
-
+	fmt.Printf("%s", u)
+	c.Data["json"] = u
+	c.ServeJSON()
 }
 
 // GetOne ...
