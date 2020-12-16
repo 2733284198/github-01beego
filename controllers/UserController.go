@@ -4,6 +4,7 @@ import (
 	"bee01/models"
 	"github.com/astaxie/beego"
 	//"golang.org/x/tools/go/ssa/interp/testdata/src/fmt"
+	"encoding/xml"
 	"fmt"
 	//"github.com/astaxie/beego/config/xml"
 )
@@ -50,11 +51,36 @@ func (c *UserController) Pay() {
 	//c.TplName = "user/pay.html"
 }
 
+// 处理xml内容，支付宝，微信返回结果处理
+
+/* postman: 发送 post, xml的内容，
+	http://localhost:8089/user/xml
+
+	<?xml version="1.0" encoding="UTF-8"?>
+<article>
+    <title type="string"> 标题 </title>
+    <content type="string"> 我是张三的内容 </content>
+</article>
+
+*/
 func (c *UserController) Xml() {
 	xmlstr := string(c.Ctx.Input.RequestBody)
 
 	beego.Info(xmlstr)
-	c.Ctx.WriteString(xmlstr)
+	//c.Ctx.WriteString(xmlstr)
+
+	p := models.Article{}
+	err := xml.Unmarshal(c.Ctx.Input.RequestBody, &p)
+
+	if err != nil {
+		c.Data["json"] = err.Error()
+		c.ServeJSON()
+
+		//fmt.Println("xml参数错误")
+	} else {
+		c.Data["json"] = p
+		c.ServeJSON()
+	}
 }
 
 func (c *UserController) PayCallback() {
