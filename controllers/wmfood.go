@@ -26,7 +26,7 @@ func (c *WmfoodController) Get() {
 	beego.Info(id)
 
 	c.Data["title"] = "你好beego getone === "
-	c.TplName = "food/getone.tpl"
+	c.TplName = "food/doAdd.tpl"
 
 	//c.Ctx.WriteString("food world 1")
 
@@ -54,7 +54,7 @@ func (c *WmfoodController) GetOne() {
 
 	//c.Data["title"] = "你好beego getone"
 
-	//c.TplName = "food/getone.tpl"
+	//c.TplName = "food/doAdd.tpl"
 
 	u := models.User{
 		Username: "张三",
@@ -69,7 +69,7 @@ func (c *WmfoodController) AddFood() {
 
 	c.Data["title"] = "AddFood"
 
-	c.TplName = "food/getone.tpl"
+	c.TplName = "food/doAdd.tpl"
 }
 
 // GetAll ...
