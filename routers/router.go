@@ -7,5 +7,7 @@ import (
 
 func init() {
 	beego.Router("/", &controllers.MainController{})
+
 	beego.Router("/food", &controllers.WmfoodController{})
+	beego.Router("/food/userjson", &controllers.WmfoodController{}, "get:GetOne")
 }
