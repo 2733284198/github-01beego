@@ -59,7 +59,7 @@ func (c *UserController) Gormget() {
 		Id: 2,
 	}
 
-	models.Db.Find(user)
+	models.Db.Find(&user)
 
 	c.Data["json"] = user
 	c.ServeJSON()

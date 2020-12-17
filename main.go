@@ -41,8 +41,8 @@ func main() {
 	//beego.Router("/user", &controllers.MainController{})
 	//beego.Router("/food", &controllers.WmfoodController{})
 
-	getconfig()
-	setsession()
+	//getconfig()
+	//setsession()
 
 	beego.Run(":88")
 
