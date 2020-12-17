@@ -3,9 +3,11 @@ package controllers
 import (
 	"bee01/models"
 	"github.com/astaxie/beego"
+
 	//"golang.org/x/tools/go/ssa/interp/testdata/src/fmt"
 	"encoding/xml"
 	"fmt"
+	"strconv"
 	//"github.com/astaxie/beego/config/xml"
 )
 
@@ -55,6 +57,26 @@ func (c *UserController) Pay() {
 /******************************
  gorm:begin
 *******************************/
+
+func (c *UserController) Gedit() {
+
+	id, _ := strconv.Atoi(c.Ctx.Input.Param(":id"))
+	beego.Warning(id)
+
+	user := models.User{
+		//Id: 2,
+		Id: id,
+	}
+	models.Db.Debug().Find(&user)
+
+	user.Username = "user222"
+	models.Db.Save(&user)
+
+	models.Db.Debug().Find(&user)
+
+	c.Data["json"] = user
+	c.ServeJSON()
+}
 
 func (c *UserController) Gadd() {
 	user := models.User{
