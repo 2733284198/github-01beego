@@ -30,7 +30,7 @@ func (c *UserController) Get() {
 	beego.Info(id)
 
 	c.Data["title"] = "你好beego getone === "
-	c.TplName = "food/doAdd.tpl"
+	c.TplName = "user/doAdd.tpl"
 
 	//c.Ctx.WriteString("food world 1")
 
@@ -53,7 +53,7 @@ func (c *UserController) Pay() {
 }
 
 func (c *UserController) Testsession(string, string) {
-	c.Setsession("username", "manlan1")
+	c.SetSession("username", "manlan1")
 
 	session1 := c.GetSession("username")
 
