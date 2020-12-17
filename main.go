@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "bee01/models"
 	"fmt"
 	"github.com/astaxie/beego"
 	_ "github.com/astaxie/beego/session/redis"
@@ -43,7 +44,9 @@ func main() {
 	getconfig()
 	setsession()
 
-	beego.Run(":8089")
-	//beego.Run()
+	beego.Run(":88")
 
+	//beego.Run()
+	// 关闭数据库连接
+	//defer models.DB.Close()
 }

@@ -52,6 +52,24 @@ func (c *UserController) Pay() {
 	//c.TplName = "user/pay.html"
 }
 
+// gorm
+
+func (c *UserController) Gormget() {
+	user := models.User{
+		Id: 2,
+	}
+
+	models.Db.Find(user)
+
+	c.Data["json"] = user
+	c.ServeJSON()
+
+	//c.TplName = "user/doAdd.tpl"
+	//c.TplName = "user/pay.tpl"
+	//c.TplName = "user/pay.xml"
+	//c.TplName = "user/pay.html"
+}
+
 func (c *UserController) Testsession(string, string) {
 	c.SetSession("username", "manlan1")
 
