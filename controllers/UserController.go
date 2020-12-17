@@ -55,11 +55,18 @@ func (c *UserController) Pay() {
 // gorm
 
 func (c *UserController) Gormget() {
-	user := models.User{
-		Id: 2,
-	}
 
-	models.Db.Find(user)
+	// 1. 查询一条数据
+
+	//user := models.User{
+	//	Id: 2,
+	//}
+	//models.Db.Find(&user)
+
+	// 2. 查询所有数据
+
+	user := []models.User{}
+	models.Db.Find(&user)
 
 	c.Data["json"] = user
 	c.ServeJSON()
