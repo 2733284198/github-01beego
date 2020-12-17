@@ -13,6 +13,8 @@ func init() {
 	// user
 	beego.Router("/user/jump", &controllers.UserController{}, "get:Jump")
 
+	beego.Router("/user/testsession", &controllers.UserController{}, "get:Testsession")
+
 	beego.Router("/user", &controllers.UserController{})
 	beego.Router("/user/:id", &controllers.UserController{}, "get:Getuid")
 	beego.Router("/user/:id([0-9]+).html", &controllers.UserController{}, "get:Getuidhtml")

@@ -52,6 +52,17 @@ func (c *UserController) Pay() {
 	//c.TplName = "user/pay.html"
 }
 
+func (c *UserController) Testsession(string, string) {
+	c.Setsession("username", "manlan1")
+
+	session1 := c.GetSession("username")
+
+	beego.Info(session1)
+
+	fmt.Println(session1)
+	c.Ctx.WriteString("session1")
+}
+
 func (c *UserController) Jump() {
 	//c.Redirect("www.baidu.com", 303)
 	//c.Redirect("/user/pay", 200)
