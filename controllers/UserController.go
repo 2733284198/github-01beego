@@ -52,7 +52,29 @@ func (c *UserController) Pay() {
 	//c.TplName = "user/pay.html"
 }
 
-// gorm
+/******************************
+ gorm:begin
+*******************************/
+
+func (c *UserController) Gadd() {
+	user := models.User{
+		Username: "manlan1",
+		Password: "m1p1",
+		Age:      33,
+	}
+
+	models.Db.Debug().Create(&user)
+	//c.Gormget()
+
+	//c.Ctx.WriteString("添加数据成功")
+
+	// 2. 查询所有数据
+	users := []models.User{}
+	models.Db.Debug().Find(&users)
+
+	c.Data["json"] = users
+	c.ServeJSON()
+}
 
 func (c *UserController) Gormget() {
 
@@ -65,10 +87,16 @@ func (c *UserController) Gormget() {
 
 	// 2. 查询所有数据
 
-	user := []models.User{}
-	models.Db.Find(&user)
+	users := []models.User{}
+	models.Db.Debug().Find(&users)
+	//
 
-	c.Data["json"] = user
+	// 3. 各种查询
+	user := models.User{}
+	models.Db.Debug().First(&user) // 第一条
+	//models.Db.Take(&user) // 第一条
+
+	c.Data["json"] = users
 	c.ServeJSON()
 
 	//c.TplName = "user/doAdd.tpl"
@@ -76,6 +104,10 @@ func (c *UserController) Gormget() {
 	//c.TplName = "user/pay.xml"
 	//c.TplName = "user/pay.html"
 }
+
+/******************************
+gorm:end
+*******************************/
 
 func (c *UserController) Testsession(string, string) {
 	c.SetSession("username", "manlan1")
