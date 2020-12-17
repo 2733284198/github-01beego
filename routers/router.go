@@ -12,6 +12,8 @@ func init() {
 
 	// gorm
 	beego.Router("/user/gget", &controllers.UserController{}, "get:Gormget")
+	beego.Router("/user/gadd", &controllers.UserController{}, "get:Gadd")
+	beego.Router("/user/gedit/:id", &controllers.UserController{}, "get:Gedit")
 
 	// user
 	beego.Router("/user/jump", &controllers.UserController{}, "get:Jump")
