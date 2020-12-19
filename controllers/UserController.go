@@ -98,6 +98,23 @@ func (c *UserController) Gadd() {
 	c.ServeJSON()
 }
 
+func (c *UserController) GormWhere() {
+	id, _ := strconv.Atoi(c.Ctx.Input.Param(":id"))
+	beego.Warning(id)
+
+	//var n1 = 5
+	var n1 = id
+	var users []models.User
+	//models.Db.Debug().Where("id > ?", n1).Find(&users) // 第一条
+	models.Db.Debug().Where("id>?", n1).Find(&users) // 第一条
+
+	//models.Db.Take(&user) // 第一条
+
+	c.Data["json"] = users
+	c.ServeJSON()
+
+}
+
 func (c *UserController) Gormget() {
 
 	// 1. 查询一条数据
