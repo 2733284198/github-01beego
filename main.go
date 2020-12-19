@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bee01/models"
 	_ "bee01/models"
 	"fmt"
 	"github.com/astaxie/beego"
@@ -36,6 +37,10 @@ func setsession() {
 	beego.BConfig.WebConfig.Session.SessionProviderConfig = "127.0.0.1:6379"
 }
 
+func TestModel() {
+	_ = models.Db.AutoMigrate(models.Article{})
+}
+
 func main() {
 
 	//beego.Router("/user", &controllers.MainController{})
@@ -44,6 +49,7 @@ func main() {
 	//getconfig()
 	//setsession()
 
+	TestModel()
 	beego.Run(":88")
 
 	//beego.Run()
