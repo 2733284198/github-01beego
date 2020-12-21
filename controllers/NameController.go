@@ -17,12 +17,14 @@ func (c *NameController) Get() {
 }
 
 //func (c *NameController) Getone() {
-func (c *NameController) GetOne() {
-	c.Ctx.WriteString("Name-getone")
+func (c *NameController) Login() {
+	//c.Ctx.WriteString("Name-getone")
 
-	//c.Data["Website"] = "beego.me - mac"
+	//c.Data["Website"] = "Name - login"
 	//c.Data["Email"] = "astaxie@gmail.com"
-	//c.TplName = "index.tpl"
+
+	c.TplName = "admin/login/login.html"
+	//c.TplName = "user/doAdd.tpl"
 }
 
 //beego.Any("/foo",func(ctx *context.Context){

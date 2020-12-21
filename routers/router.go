@@ -2,6 +2,8 @@ package routers
 
 import (
 	"bee01/controllers"
+	//"bee01/controllers/admin"
+
 	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/context"
@@ -15,11 +17,16 @@ func init() {
 			fmt.Println("我是一个中间件")
 			beego.Warning("我是一个中间件")
 
-			ctx.WriteString("/n/n v1-NSBefore")
-
+			//ctx.WriteString("/n/n v1-NSBefore")
 		}),
 
+		beego.NSRouter("/", &controllers.NameController{}),
 		beego.NSRouter("/name", &controllers.NameController{}),
+		beego.NSRouter("/login", &controllers.NameController{}, "get:Login"),
+
+		//beego.NSRouter("/", &admin.MainController{}),
+		//beego.NSRouter("/welcome", &admin.MainController{}, "get:Welcome"),
+
 		beego.NSRouter("/food", &controllers.WmfoodController{}),
 
 		//beego.NSCond(func(ctx *context.Context) bool {
