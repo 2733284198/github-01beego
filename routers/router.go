@@ -2,11 +2,26 @@ package routers
 
 import (
 	"bee01/controllers"
+	"fmt"
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/context"
 )
 
 func init() {
 	ns := beego.NewNamespace("/v1",
+
+		beego.NSBefore(func(ctx *context.Context) {
+			//ctx.Output.Body([]byte("notAllowed"))
+			fmt.Println("我是一个中间件")
+			beego.Warning("我是一个中间件")
+
+			ctx.WriteString("/n/n v1-NSBefore")
+
+		}),
+
+		beego.NSRouter("/name", &controllers.NameController{}),
+		beego.NSRouter("/food", &controllers.WmfoodController{}),
+
 		//beego.NSCond(func(ctx *context.Context) bool {
 		//	if ctx.Input.Domain() == "api.beego.me" {
 		//		return true
@@ -14,10 +29,9 @@ func init() {
 		//	return false
 		//}),
 
-		beego.NSNamespace("/userv1",
-			//beego.NSRouter("/user/add", &controllers.UserController{}, "post:Doadd"),
+		/*beego.NSNamespace("/userv1",
 			beego.NSRouter("/add", &controllers.UserController{}, "post:Doadd"),
-		),
+		),*/
 	)
 
 	//beego.NSRouter("/changepassword", &UserController{}),
@@ -26,7 +40,7 @@ func init() {
 
 	beego.Router("/", &controllers.MainController{})
 
-	beego.Router("/food", &controllers.WmfoodController{})
+	//beego.Router("/food", &controllers.WmfoodController{})
 
 	// gorm
 	beego.Router("/user/gwhere/:id", &controllers.UserController{}, "get:GormWhere")
