@@ -1,11 +1,25 @@
 package controllers
 
 import (
+	//"strings"
+
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/cache"
+	"github.com/astaxie/beego/utils/captcha"
 )
 
 type NameController struct {
 	beego.Controller
+}
+
+var cpt *captcha.Captcha
+
+func init() {
+	store := cache.NewMemoryCache()
+	cpt = captcha.NewWithFilter("/captcha/", store)
+	cpt.ChallengeNums = 4
+	cpt.StdWidth = 100
+	cpt.StdHeight = 40
 }
 
 func (c *NameController) Get() {
@@ -17,6 +31,19 @@ func (c *NameController) Get() {
 }
 
 //func (c *NameController) Getone() {
+func (c *NameController) DoLogin() {
+
+	//captchaId := c.GetString("captchaId")
+	//captchaValue := strings.Trim(c.GetString("captcha"), "")
+
+	if !cpt.VerifyReq(c.Ctx.Request) {
+		c.Ctx.WriteString("验证码失败")
+	} else {
+		c.Ctx.WriteString("验证码成功")
+	}
+
+}
+
 func (c *NameController) Login() {
 	//c.Ctx.WriteString("Name-getone")
 

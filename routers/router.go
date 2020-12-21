@@ -22,7 +22,10 @@ func init() {
 
 		beego.NSRouter("/", &controllers.NameController{}),
 		beego.NSRouter("/name", &controllers.NameController{}),
+
 		beego.NSRouter("/login", &controllers.NameController{}, "get:Login"),
+
+		beego.NSRouter("/dologin", &controllers.NameController{}, "post:DoLogin"),
 
 		//beego.NSRouter("/", &admin.MainController{}),
 		//beego.NSRouter("/welcome", &admin.MainController{}, "get:Welcome"),
