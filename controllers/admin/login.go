@@ -1,11 +1,13 @@
 package admin
 
 import (
-	"github.com/astaxie/beego"
+	_ "bee01/controllers"
+	_ "github.com/astaxie/beego"
 )
 
 type LoginController struct {
-	beego.Controller
+	//beego.Controller
+	BaseController
 }
 
 func (c *LoginController) Get() {

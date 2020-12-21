@@ -2,7 +2,7 @@ package routers
 
 import (
 	"bee01/controllers"
-	//"bee01/controllers/admin"
+	"bee01/controllers/admin"
 
 	"fmt"
 	"github.com/astaxie/beego"
@@ -20,12 +20,13 @@ func init() {
 			//ctx.WriteString("/n/n v1-NSBefore")
 		}),
 
-		beego.NSRouter("/", &controllers.NameController{}),
-		beego.NSRouter("/name", &controllers.NameController{}),
+		//beego.NSRouter("/", &controllers.NameController{}),
+		beego.NSRouter("/", &admin.NameController{}),
+		beego.NSRouter("/name", &admin.NameController{}),
 
-		beego.NSRouter("/login", &controllers.NameController{}, "get:Login"),
+		beego.NSRouter("/login", &admin.NameController{}, "get:Login"),
 
-		beego.NSRouter("/dologin", &controllers.NameController{}, "post:DoLogin"),
+		beego.NSRouter("/dologin", &admin.NameController{}, "post:DoLogin"),
 
 		//beego.NSRouter("/", &admin.MainController{}),
 		//beego.NSRouter("/welcome", &admin.MainController{}, "get:Welcome"),
