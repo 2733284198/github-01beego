@@ -6,6 +6,24 @@ import (
 )
 
 func init() {
+	ns := beego.NewNamespace("/v1",
+		//beego.NSCond(func(ctx *context.Context) bool {
+		//	if ctx.Input.Domain() == "api.beego.me" {
+		//		return true
+		//	}
+		//	return false
+		//}),
+
+		beego.NSNamespace("/userv1",
+			//beego.NSRouter("/user/add", &controllers.UserController{}, "post:Doadd"),
+			beego.NSRouter("/add", &controllers.UserController{}, "post:Doadd"),
+		),
+	)
+
+	//beego.NSRouter("/changepassword", &UserController{}),
+	//beego.Router("/user/add", &controllers.UserController{}, "post:Doadd")
+	beego.AddNamespace(ns)
+
 	beego.Router("/", &controllers.MainController{})
 
 	beego.Router("/food", &controllers.WmfoodController{})
@@ -29,7 +47,8 @@ func init() {
 	// 添加用户
 	beego.Router("/user/json", &controllers.UserController{}, "get:GetOne")
 	beego.Router("/user/addform", &controllers.UserController{}, "get:AddForm")
-	beego.Router("/user/add", &controllers.UserController{}, "post:Doadd")
+
+	//beego.Router("/user/add", &controllers.UserController{}, "post:Doadd")
 
 	// xml类型，支付宝，微信返回类型
 	beego.Router("/user/xml", &controllers.UserController{}, "post:Xml")
