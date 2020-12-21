@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	//"strings"
+	"strings"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/cache"
@@ -32,6 +32,24 @@ func (c *NameController) Get() {
 
 //func (c *NameController) Getone() {
 func (c *NameController) DoLogin() {
+
+	//captchaId := c.GetString("captchaId")
+	captchaId := c.GetString("captcha_id")
+	captchaValue := strings.Trim(c.GetString("captcha"), "")
+
+	beego.Warning("=======>")
+	beego.Warning(captchaId)
+	beego.Warning(captchaValue)
+
+	//if !cpt.VerifyReq(captchaId, captchaValue) {
+	if !cpt.Verify(captchaId, captchaValue) {
+		c.Ctx.WriteString("验证码失败")
+	} else {
+		c.Ctx.WriteString("验证码成功")
+	}
+}
+
+func (c *NameController) DoLogin2() {
 
 	//captchaId := c.GetString("captchaId")
 	//captchaValue := strings.Trim(c.GetString("captcha"), "")
