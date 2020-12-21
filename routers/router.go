@@ -51,6 +51,10 @@ func init() {
 
 	beego.Router("/", &controllers.MainController{})
 
+	//  图像处理
+	beego.Router("/qrcode", &controllers.MainController{}, "get:Qrcode")
+	beego.Router("/scaleimg", &controllers.MainController{}, "get:ScaleImg")
+
 	//beego.Router("/food", &controllers.WmfoodController{})
 
 	// gorm
