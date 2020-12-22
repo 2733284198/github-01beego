@@ -50,3 +50,12 @@ func (c *MainController) Get() {
 	c.Data["Email"] = "astaxie@gmail.com"
 	c.TplName = "index.tpl"
 }
+
+func (c *MainController) Img() {
+	//c.Ctx.WriteString("hello Image")
+
+	//c.Data["Website"] = "beego.me - mac"
+	//c.Data["Email"] = "astaxie@gmail.com"
+
+	c.TplName = "index.html"
+}

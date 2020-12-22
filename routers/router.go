@@ -50,6 +50,7 @@ func init() {
 	beego.AddNamespace(ns)
 
 	beego.Router("/", &controllers.MainController{})
+	beego.Router("/img", &controllers.MainController{}, "get:Img")
 
 	//  图像处理
 	beego.Router("/qrcode", &controllers.MainController{}, "get:Qrcode")

@@ -1,0 +1,16 @@
+2020/12/22 22:13:48.395 [D] [server.go:2843]  |            ::1|[42m 200 [0m|   150.0339ms|   match|[44m GET     [0m /scaleimg   r:/scaleimg
+2020/12/22 22:13:53.397 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     3.0005ms|   match|[44m GET     [0m /admin/   r:/admin/
+2020/12/22 22:13:53.439 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     6.0016ms|   match|[44m GET     [0m /static/admin/css/basic.css
+2020/12/22 22:13:53.443 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     1.0007ms|   match|[44m GET     [0m /static/admin/js/base.js
+2020/12/22 22:13:53.459 [D] [server.go:2843]  |            ::1|[42m 200 [0m|    26.0051ms|   match|[44m GET     [0m /static/admin/bootstrap/css/bootstrap.css
+2020/12/22 22:13:53.479 [D] [server.go:2843]  |            ::1|[42m 200 [0m|    22.0064ms|   match|[44m GET     [0m /static/admin/images/beego.jpg
+2020/12/22 22:13:53.489 [D] [server.go:2843]  |            ::1|[42m 200 [0m|    47.0104ms|   match|[44m GET     [0m /static/admin/bootstrap/js/jquery-1.10.1.js
+2020/12/22 22:13:53.555 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     3.9996ms|   match|[44m GET     [0m /admin/welcome   r:/admin/welcome
+2020/12/22 22:13:55.344 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     3.0004ms|   match|[44m GET     [0m /admin/manager/add   r:/admin/manager/add
+2020/12/22 22:13:55.873 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     4.0012ms|   match|[44m GET     [0m /admin/manager   r:/admin/manager
+2020/12/22 23:33:09.029 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     4.0005ms|   match|[44m GET     [0m /admin/   r:/admin/
+2020/12/22 23:33:09.193 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     1.0004ms|   match|[44m GET     [0m /static/admin/bootstrap/js/jquery-1.10.1.js
+2020/12/22 23:33:09.221 [D] [server.go:2843]  |            ::1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /static/admin/images/beego.jpg
+2020/12/22 23:33:09.245 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/admin/js/base.js
+2020/12/22 23:33:09.301 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     3.0009ms|   match|[44m GET     [0m /admin/manager   r:/admin/manager
+2020/12/22 23:33:10.414 [D] [server.go:2843]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /favicon.ico
