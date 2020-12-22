@@ -5,10 +5,18 @@ import (
 	_ "bee01/models"
 	"fmt"
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
 	_ "github.com/astaxie/beego/session/redis"
 	//_ "bee01/controllers"
 	_ "bee01/routers"
+	"encoding/gob"
 )
+
+func init() {
+	fmt.Println("main-init")
+
+	gob.Register(models.User{})
+}
 
 func getconfig() {
 	port := beego.AppConfig.String("httpport")
@@ -41,6 +49,25 @@ func TestModel() {
 	_ = models.Db.AutoMigrate(models.Article{})
 }
 
+func TestLog() {
+	//beego.SetLogger("")
+	logs.Alert("====> Logs modules ")
+
+	beego.SetLogger("file", `{"filename":"logs/test.log"}`)
+
+	// 不打印在console，只打印在文件
+	//beego.BeeLogger.DelLogger("console")
+
+	// beego
+	beego.Info("这是info")
+	beego.Debug("这是 debug")
+	beego.Critical("这是 Critical")
+	beego.Alert("这是 Alert")
+
+	// 只打印debug信息
+	beego.SetLevel(beego.LevelDebug)
+}
+
 func main() {
 
 	//beego.Router("/user", &controllers.MainController{})
@@ -49,6 +76,7 @@ func main() {
 	//getconfig()
 	//setsession()
 
+	TestLog()
 	TestModel()
 	beego.Run(":88")
 
