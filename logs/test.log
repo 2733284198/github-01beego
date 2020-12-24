@@ -306,3 +306,8 @@
 2020/12/24 11:32:38.226 [D] [server.go:2807]  |            ::1|[97;42m 200 [0m|   1.141616ms|   match|[97;44m GET     [0m /admin/manager   r:/admin/manager
 2020/12/24 11:32:38.833 [D] [server.go:2807]  |            ::1|[97;42m 200 [0m|   1.701831ms|   match|[97;44m GET     [0m /admin/manager/add   r:/admin/manager/add
 2020/12/24 11:32:48.772 [D] [server.go:2807]  |            ::1|[97;42m 200 [0m|    181.103µs|   match|[97;44m GET     [0m /product   r:/product
+2020/12/24 11:33:42.303 [I] [main.go:62]  这是info 
+2020/12/24 11:33:42.303 [D] [main.go:63]  这是 debug 
+2020/12/24 11:33:42.303 [C] [main.go:64]  这是 Critical 
+2020/12/24 11:33:42.303 [A] [main.go:65]  这是 Alert 
+2020/12/24 11:33:42.320 [I] [asm_amd64.s:1373]  http server Running on http://:88
