@@ -6,3 +6,7 @@ type Book struct {
 	Subject string
 	Bookid  int
 }
+
+type Books struct {
+	Books []Book
+}

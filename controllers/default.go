@@ -64,8 +64,40 @@ func (c *MainController) Jj() {
 	response["book2"] = book2
 	response["book3"] = book3
 
-	response["data"] = `{"name":"Xiao mi 6","product_id":"10","number":"10000","price":"2499","is_on_sale":"true"}`
+	// 嵌套json
+	bodydata := `{
+		  "version": {
+			  "max": 3,
+			  "last": "2016-03-11",
+			  "detail": [
+				  {
+					  "time": "2016-03-12",
+					  "ops": "add my email"
+				  }
+				 ]
+			  }
+		  }
+  	`
 
+	response["bodydata"] = bodydata
+
+	//
+	reqBody := []byte(`{"学校班级信息":
+	{"班级信息":
+		{"班级":"0212",
+		"学号":"2002-2006"}
+	}
+	}`)
+	response["reqBody"] = reqBody
+
+	//response1 := make(map[string]   interface{map[string] interface{}} )
+	//response1 = (
+	//	"book1": models.Book{Title: "Go 语言", Author: "www.runoob.com", Subject: "Go 语言教程", Bookid: 6495407},
+	//	"book2":models.Book{Title: "Go 语言", Author: "www.runoob.com", Subject: "Go 语言教程", Bookid: 6495407},
+	//)
+	//response["books"] = response1
+
+	response["data"] = `{"name":"Xiao mi 6","product_id":"10","number":"10000","price":"2499","is_on_sale":"true"}`
 	response["msg"] = "新增失败！"
 	response["code"] = 500
 	//response["err"] = err.Key + " " + err.Message
