@@ -68,6 +68,9 @@ func init() {
 	// user
 	beego.Router("/user/jump", &controllers.UserController{}, "get:Jump")
 
+	// json: todo 2020-12-24 09:56:50
+	beego.Router("/jj", &controllers.MainController{}, "get:Jj")
+
 	beego.Router("/user/testsession", &controllers.UserController{}, "get:Testsession")
 
 	beego.Router("/user", &controllers.UserController{})

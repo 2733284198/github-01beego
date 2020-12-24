@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"bee01/models"
 	"fmt"
 	"github.com/astaxie/beego"
 	. "github.com/hunterhug/go_image"
@@ -49,6 +50,29 @@ func (c *MainController) Get() {
 	c.Data["Website"] = "beego.me - mac"
 	c.Data["Email"] = "astaxie@gmail.com"
 	c.TplName = "index.tpl"
+}
+
+func (c *MainController) Jj() {
+
+	response := make(map[string]interface{})
+
+	book1 := models.Book{"Go 语言", "www.runoob.com", "Go 语言教程", 6495407}
+	book2 := models.Book{"Go 语言", "www.runoob.com", "Go 语言教程", 6495407}
+	book3 := models.Book{"Go 语言", "www.runoob.com", "Go 语言教程", 6495407}
+
+	response["book1"] = book1
+	response["book2"] = book2
+	response["book3"] = book3
+
+	response["data"] = `{"name":"Xiao mi 6","product_id":"10","number":"10000","price":"2499","is_on_sale":"true"}`
+
+	response["msg"] = "新增失败！"
+	response["code"] = 500
+	//response["err"] = err.Key + " " + err.Message
+
+	c.Data["json"] = response
+	c.ServeJSON()
+
 }
 
 func (c *MainController) Img() {
