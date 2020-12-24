@@ -52,6 +52,35 @@ func (c *MainController) Get() {
 	c.TplName = "index.tpl"
 }
 
+func (c *MainController) Jj1() {
+
+	var tags map[string]interface{}
+	tags = make(map[string]interface{})
+
+	var tagsLocal map[string]string
+	tagsLocal = make(map[string]string)
+	var tagsTest map[string]string
+	tagsTest = make(map[string]string)
+	var tagsProduction map[string]string
+	tagsProduction = make(map[string]string)
+
+	tagsLocal["dev.www.9178.us"] = "dev.www.9178.us"
+	tagsLocal["dev.static.9178.us"] = "dev.static.9178.us"
+
+	tagsTest["dev.www.9178.us"] = "www.ninja911.com"
+	tagsTest["dev.static.9178.us"] = "static.ninja911.com"
+
+	tagsProduction["dev.www.9178.us"] = "ipx.www.ninja911.com"
+	tagsProduction["dev.static.9178.us"] = "ipx.static.ninja911.com"
+
+	tags["local"] = tagsLocal
+	tags["test"] = tagsLocal
+	tags["production"] = tagsLocal
+
+	c.Data["json"] = tags
+	c.ServeJSON()
+}
+
 func (c *MainController) Jj() {
 
 	response := make(map[string]interface{})
