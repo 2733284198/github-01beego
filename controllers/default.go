@@ -52,6 +52,13 @@ func (c *MainController) Get() {
 	c.TplName = "index.tpl"
 }
 
+func (c *MainController) Product() {
+	data := models.ProductsList()
+
+	c.Data["json"] = data
+	c.ServeJSON()
+}
+
 func (c *MainController) Jj1() {
 
 	var tags map[string]interface{}
