@@ -1,255 +1,85 @@
-2020/12/23 02:46:35.778 [I] [main.go:62]  这是info 
-2020/12/23 02:46:35.778 [D] [main.go:63]  这是 debug 
-2020/12/23 02:46:35.778 [C] [main.go:64]  这是 Critical 
-2020/12/23 02:46:35.778 [A] [main.go:65]  这是 Alert 
-2020/12/23 02:46:35.907 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/23 02:49:41.325 [I] [main.go:62]  这是info 
-2020/12/23 02:49:41.325 [D] [main.go:63]  这是 debug 
-2020/12/23 02:49:41.325 [C] [main.go:64]  这是 Critical 
-2020/12/23 02:49:41.326 [A] [main.go:65]  这是 Alert 
-2020/12/23 02:49:41.474 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/23 02:49:48.150 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     1.9999ms|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:53:01.136 [I] [main.go:62]  这是info 
-2020/12/23 02:53:01.136 [D] [main.go:63]  这是 debug 
-2020/12/23 02:53:01.136 [C] [main.go:64]  这是 Critical 
-2020/12/23 02:53:01.137 [A] [main.go:65]  这是 Alert 
-2020/12/23 02:53:01.258 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/23 02:53:05.113 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     2.0015ms|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:53:06.163 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:24.679 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:25.805 [D] [server.go:2843]  |            ::1|[42m 200 [0m|      999.1µs|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:26.289 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:26.524 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:26.765 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:30.003 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:30.437 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:30.675 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:30.948 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:30.990 [D] [server.go:2843]  |            ::1|[42m 200 [0m|      999.4µs|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:33.433 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:36.490 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:54:37.548 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:55:04.257 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:55:08.346 [I] [main.go:62]  这是info 
-2020/12/23 02:55:08.346 [D] [main.go:63]  这是 debug 
-2020/12/23 02:55:08.346 [C] [main.go:64]  这是 Critical 
-2020/12/23 02:55:08.346 [A] [main.go:65]  这是 Alert 
-2020/12/23 02:55:08.494 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/23 02:55:09.458 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     5.0019ms|   match|[44m GET     [0m /img   r:/img
-2020/12/23 02:55:09.489 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     1.0009ms|   match|[44m GET     [0m /static/upload/1.png
-2020/12/23 04:31:51.850 [I] [main.go:62]  这是info 
-2020/12/23 04:31:51.850 [D] [main.go:63]  这是 debug 
-2020/12/23 04:31:51.851 [C] [main.go:64]  这是 Critical 
-2020/12/23 04:31:51.851 [A] [main.go:65]  这是 Alert 
-2020/12/23 04:31:58.001 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/23 05:33:40.034 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     6.0013ms|   match|[44m GET     [0m /img   r:/img
-2020/12/23 05:33:40.106 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     1.0004ms|   match|[44m GET     [0m /static/upload/1.png
-2020/12/23 05:33:41.371 [D] [server.go:2843]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /favicon.ico
-2020/12/24 09:05:53.850 [I] [main.go:62]  这是info 
-2020/12/24 09:05:53.850 [D] [main.go:63]  这是 debug 
-2020/12/24 09:05:53.850 [C] [main.go:64]  这是 Critical 
-2020/12/24 09:05:53.851 [A] [main.go:65]  这是 Alert 
-2020/12/24 09:05:54.106 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 09:56:17.408 [I] [main.go:62]  这是info 
-2020/12/24 09:56:17.408 [D] [main.go:63]  这是 debug 
-2020/12/24 09:56:17.409 [C] [main.go:64]  这是 Critical 
-2020/12/24 09:56:17.409 [A] [main.go:65]  这是 Alert 
-2020/12/24 09:56:17.606 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 09:56:20.408 [I] [main.go:62]  这是info 
-2020/12/24 09:56:20.408 [D] [main.go:63]  这是 debug 
-2020/12/24 09:56:20.409 [C] [main.go:64]  这是 Critical 
-2020/12/24 09:56:20.409 [A] [main.go:65]  这是 Alert 
-2020/12/24 09:56:20.527 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 09:56:57.422 [I] [main.go:62]  这是info 
-2020/12/24 09:56:57.422 [D] [main.go:63]  这是 debug 
-2020/12/24 09:56:57.422 [C] [main.go:64]  这是 Critical 
-2020/12/24 09:56:57.422 [A] [main.go:65]  这是 Alert 
-2020/12/24 09:56:57.620 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 09:57:01.851 [I] [main.go:62]  这是info 
-2020/12/24 09:57:01.851 [D] [main.go:63]  这是 debug 
-2020/12/24 09:57:01.851 [C] [main.go:64]  这是 Critical 
-2020/12/24 09:57:01.852 [A] [main.go:65]  这是 Alert 
-2020/12/24 09:57:02.046 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 09:57:05.106 [I] [main.go:62]  这是info 
-2020/12/24 09:57:05.106 [D] [main.go:63]  这是 debug 
-2020/12/24 09:57:05.107 [C] [main.go:64]  这是 Critical 
-2020/12/24 09:57:05.107 [A] [main.go:65]  这是 Alert 
-2020/12/24 09:57:05.225 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 09:57:25.544 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     4.0024ms|   match|[44m GET     [0m /     r:/
-2020/12/24 09:57:26.162 [D] [server.go:2843]  |            ::1|[43m 404 [0m|      998.9µs| nomatch|[44m GET     [0m /favicon.ico
-2020/12/24 09:57:29.436 [D] [server.go:2843]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:57:45.486 [D] [server.go:2843]  |            ::1|[43m 404 [0m|     1.0011ms| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:57:46.703 [I] [main.go:62]  这是info 
-2020/12/24 09:57:46.703 [D] [main.go:63]  这是 debug 
-2020/12/24 09:57:46.704 [C] [main.go:64]  这是 Critical 
-2020/12/24 09:57:46.704 [A] [main.go:65]  这是 Alert 
-2020/12/24 09:57:46.833 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 09:58:00.481 [D] [server.go:2843]  |            ::1|[43m 404 [0m|     3.0008ms| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:58:02.062 [D] [server.go:2843]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:58:03.310 [D] [server.go:2843]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:58:28.154 [I] [main.go:62]  这是info 
-2020/12/24 09:58:28.154 [D] [main.go:63]  这是 debug 
-2020/12/24 09:58:28.155 [C] [main.go:64]  这是 Critical 
-2020/12/24 09:58:28.155 [A] [main.go:65]  这是 Alert 
-2020/12/24 09:58:28.300 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 09:58:30.355 [D] [server.go:2843]  |            ::1|[43m 404 [0m|     3.0006ms| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:58:33.208 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     3.0006ms|   match|[44m GET     [0m /     r:/
-2020/12/24 09:58:35.768 [D] [server.go:2843]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:59:08.971 [I] [main.go:62]  这是info 
-2020/12/24 09:59:08.971 [D] [main.go:63]  这是 debug 
-2020/12/24 09:59:08.971 [C] [main.go:64]  这是 Critical 
-2020/12/24 09:59:08.972 [A] [main.go:65]  这是 Alert 
-2020/12/24 09:59:09.287 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 09:59:10.763 [D] [server.go:2843]  |            ::1|[43m 404 [0m|     3.0084ms| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:59:11.326 [I] [main.go:62]  这是info 
-2020/12/24 09:59:11.326 [D] [main.go:63]  这是 debug 
-2020/12/24 09:59:11.326 [C] [main.go:64]  这是 Critical 
-2020/12/24 09:59:11.326 [A] [main.go:65]  这是 Alert 
-2020/12/24 09:59:11.464 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 09:59:13.330 [D] [server.go:2843]  |            ::1|[43m 404 [0m|     3.0012ms| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:59:14.788 [D] [server.go:2843]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:59:16.552 [D] [server.go:2843]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:59:17.276 [D] [server.go:2843]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:59:17.634 [D] [server.go:2843]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:59:17.917 [D] [server.go:2843]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:59:46.210 [I] [main.go:62]  这是info 
-2020/12/24 09:59:46.211 [D] [main.go:63]  这是 debug 
-2020/12/24 09:59:46.211 [C] [main.go:64]  这是 Critical 
-2020/12/24 09:59:46.211 [A] [main.go:65]  这是 Alert 
-2020/12/24 09:59:46.326 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 09:59:46.470 [D] [server.go:2843]  |      127.0.0.1|[43m 404 [0m|     2.0003ms| nomatch|[44m GET     [0m /tjson
-2020/12/24 09:59:46.485 [D] [server.go:2843]  |      127.0.0.1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /ttj
-2020/12/24 09:59:49.660 [D] [server.go:2843]  |      127.0.0.1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /ttj
-2020/12/24 10:00:38.934 [I] [main.go:62]  这是info 
-2020/12/24 10:00:38.934 [D] [main.go:63]  这是 debug 
-2020/12/24 10:00:38.934 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:00:38.934 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:00:39.104 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:00:44.041 [D] [server.go:2843]  |            ::1|[43m 404 [0m|     2.9993ms| nomatch|[44m GET     [0m /tj
-2020/12/24 10:04:16.095 [I] [main.go:62]  这是info 
-2020/12/24 10:04:16.095 [D] [main.go:63]  这是 debug 
-2020/12/24 10:04:16.096 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:04:16.096 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:04:16.239 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:04:35.046 [I] [main.go:62]  这是info 
-2020/12/24 10:04:35.046 [D] [main.go:63]  这是 debug 
-2020/12/24 10:04:35.046 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:04:35.047 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:04:35.166 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:04:35.254 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     2.0003ms|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:08:10.207 [I] [main.go:62]  这是info 
-2020/12/24 10:08:10.207 [D] [main.go:63]  这是 debug 
-2020/12/24 10:08:10.207 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:08:10.208 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:08:10.378 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:08:12.299 [D] [server.go:2843]  |            ::1|[42m 200 [0m|          2ms|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:09:17.507 [I] [main.go:62]  这是info 
-2020/12/24 10:09:17.507 [D] [main.go:63]  这是 debug 
-2020/12/24 10:09:17.508 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:09:17.508 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:09:17.647 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:09:35.274 [I] [main.go:62]  这是info 
-2020/12/24 10:09:35.274 [D] [main.go:63]  这是 debug 
-2020/12/24 10:09:35.274 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:09:35.275 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:09:35.393 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:10:56.492 [I] [main.go:62]  这是info 
-2020/12/24 10:10:56.492 [D] [main.go:63]  这是 debug 
-2020/12/24 10:10:56.492 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:10:56.493 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:10:56.623 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:10:56.810 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     3.0005ms|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:13:23.641 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:13:26.451 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:13:26.981 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:13:27.355 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:13:27.632 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:13:27.854 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:13:27.966 [D] [server.go:2843]  |            ::1|[42m 200 [0m|      999.7µs|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:13:28.206 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:13:28.319 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:13:28.955 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:13:30.111 [I] [main.go:62]  这是info 
-2020/12/24 10:13:30.112 [D] [main.go:63]  这是 debug 
-2020/12/24 10:13:30.112 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:13:30.113 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:13:30.300 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:13:30.465 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     2.9992ms|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:15:14.391 [I] [main.go:62]  这是info 
-2020/12/24 10:15:14.391 [D] [main.go:63]  这是 debug 
-2020/12/24 10:15:14.392 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:15:14.392 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:15:14.579 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:15:16.765 [I] [main.go:62]  这是info 
-2020/12/24 10:15:16.766 [D] [main.go:63]  这是 debug 
-2020/12/24 10:15:16.766 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:15:16.766 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:15:16.879 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:26:17.567 [I] [main.go:62]  这是info 
-2020/12/24 10:26:17.567 [D] [main.go:63]  这是 debug 
-2020/12/24 10:26:17.567 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:26:17.567 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:26:17.700 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:26:21.376 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     2.9999ms|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:29:00.238 [I] [main.go:62]  这是info 
-2020/12/24 10:29:00.238 [D] [main.go:63]  这是 debug 
-2020/12/24 10:29:00.238 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:29:00.239 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:29:00.407 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:29:00.452 [D] [server.go:2843]  |      127.0.0.1|[42m 200 [0m|     3.0013ms|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:31:38.405 [I] [main.go:62]  这是info 
-2020/12/24 10:31:38.406 [D] [main.go:63]  这是 debug 
-2020/12/24 10:31:38.406 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:31:38.407 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:31:38.524 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:31:38.547 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     3.0016ms|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:31:39.532 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:31:40.604 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:31:42.073 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:31:43.096 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:31:44.005 [D] [server.go:2843]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:35:25.489 [I] [main.go:62]  这是info 
-2020/12/24 10:35:25.489 [D] [main.go:63]  这是 debug 
-2020/12/24 10:35:25.489 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:35:25.490 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:35:25.621 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:35:25.662 [D] [server.go:2843]  |      127.0.0.1|[42m 200 [0m|     3.0001ms|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:35:26.870 [D] [server.go:2843]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:35:41.081 [I] [main.go:62]  这是info 
-2020/12/24 10:35:41.081 [D] [main.go:63]  这是 debug 
-2020/12/24 10:35:41.082 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:35:41.082 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:35:41.276 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:35:42.338 [I] [main.go:62]  这是info 
-2020/12/24 10:35:42.338 [D] [main.go:63]  这是 debug 
-2020/12/24 10:35:42.338 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:35:42.339 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:35:42.488 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:41:48.697 [I] [main.go:62]  这是info 
-2020/12/24 10:41:48.697 [D] [main.go:63]  这是 debug 
-2020/12/24 10:41:48.698 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:41:48.699 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:41:48.812 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:43:22.634 [I] [main.go:62]  这是info 
-2020/12/24 10:43:22.634 [D] [main.go:63]  这是 debug 
-2020/12/24 10:43:22.635 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:43:22.636 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:43:22.751 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:43:37.671 [I] [main.go:62]  这是info 
-2020/12/24 10:43:37.671 [D] [main.go:63]  这是 debug 
-2020/12/24 10:43:37.671 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:43:37.671 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:43:37.811 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:44:24.238 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     2.9999ms|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:45:18.933 [I] [main.go:62]  这是info 
-2020/12/24 10:45:18.933 [D] [main.go:63]  这是 debug 
-2020/12/24 10:45:18.933 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:45:18.933 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:45:19.095 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:47:08.845 [I] [main.go:62]  这是info 
-2020/12/24 10:47:08.845 [D] [main.go:63]  这是 debug 
-2020/12/24 10:47:08.845 [C] [main.go:64]  这是 Critical 
-2020/12/24 10:47:08.845 [A] [main.go:65]  这是 Alert 
-2020/12/24 10:47:08.993 [I] [asm_amd64.s:1374]  http server Running on http://:88
-2020/12/24 10:47:11.489 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     4.0013ms|   match|[44m GET     [0m /jj   r:/jj
-2020/12/24 10:47:13.433 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     1.0003ms|   match|[44m GET     [0m /jj1   r:/jj1
+2020/12/25 02:14:10.231 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     1.9997ms|   match|[44m GET     [0m /img   r:/img
+2020/12/25 02:14:10.348 [D] [server.go:2843]  |            ::1|[42m 200 [0m|    47.0102ms|   match|[44m GET     [0m /static/upload/1.png
+2020/12/25 02:14:35.856 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     1.9991ms|   match|[44m GET     [0m /img   r:/img
+2020/12/25 02:31:45.161 [I] [main.go:63]  这是info 
+2020/12/25 02:31:45.161 [D] [main.go:64]  这是 debug 
+2020/12/25 02:31:45.162 [C] [main.go:65]  这是 Critical 
+2020/12/25 02:31:45.162 [A] [main.go:66]  这是 Alert 
+2020/12/25 02:31:45.295 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:32:34.821 [I] [main.go:68]  这是info 
+2020/12/25 02:32:34.821 [D] [main.go:69]  这是 debug 
+2020/12/25 02:32:34.821 [C] [main.go:70]  这是 Critical 
+2020/12/25 02:32:34.822 [A] [main.go:71]  这是 Alert 
+2020/12/25 02:32:35.094 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:32:39.654 [I] [main.go:68]  这是info 
+2020/12/25 02:32:39.654 [D] [main.go:69]  这是 debug 
+2020/12/25 02:32:39.654 [C] [main.go:70]  这是 Critical 
+2020/12/25 02:32:39.654 [A] [main.go:71]  这是 Alert 
+2020/12/25 02:32:39.861 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:32:42.893 [I] [main.go:68]  这是info 
+2020/12/25 02:32:42.894 [D] [main.go:69]  这是 debug 
+2020/12/25 02:32:42.894 [C] [main.go:70]  这是 Critical 
+2020/12/25 02:32:42.894 [A] [main.go:71]  这是 Alert 
+2020/12/25 02:32:43.047 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:33:16.114 [I] [main.go:69]  这是info 
+2020/12/25 02:33:16.114 [D] [main.go:70]  这是 debug 
+2020/12/25 02:33:16.115 [C] [main.go:71]  这是 Critical 
+2020/12/25 02:33:16.115 [A] [main.go:72]  这是 Alert 
+2020/12/25 02:33:16.232 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:33:55.233 [I] [main.go:70]  这是info 
+2020/12/25 02:33:55.233 [D] [main.go:71]  这是 debug 
+2020/12/25 02:33:55.234 [C] [main.go:72]  这是 Critical 
+2020/12/25 02:33:55.234 [A] [main.go:73]  这是 Alert 
+2020/12/25 02:33:55.410 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:34:00.115 [I] [main.go:71]  这是info 
+2020/12/25 02:34:00.115 [D] [main.go:72]  这是 debug 
+2020/12/25 02:34:00.115 [C] [main.go:73]  这是 Critical 
+2020/12/25 02:34:00.116 [A] [main.go:74]  这是 Alert 
+2020/12/25 02:34:00.305 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:34:01.836 [I] [main.go:71]  这是info 
+2020/12/25 02:34:01.836 [D] [main.go:72]  这是 debug 
+2020/12/25 02:34:01.837 [C] [main.go:73]  这是 Critical 
+2020/12/25 02:34:01.837 [A] [main.go:74]  这是 Alert 
+2020/12/25 02:34:01.986 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:34:16.979 [I] [main.go:71]  这是info 
+2020/12/25 02:34:16.979 [D] [main.go:72]  这是 debug 
+2020/12/25 02:34:16.980 [C] [main.go:73]  这是 Critical 
+2020/12/25 02:34:16.980 [A] [main.go:74]  这是 Alert 
+2020/12/25 02:34:17.116 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:34:42.666 [I] [main.go:75]  这是info 
+2020/12/25 02:34:42.666 [D] [main.go:76]  这是 debug 
+2020/12/25 02:34:42.667 [C] [main.go:77]  这是 Critical 
+2020/12/25 02:34:42.667 [A] [main.go:78]  这是 Alert 
+2020/12/25 02:34:42.781 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:35:48.743 [I] [main.go:79]  这是info 
+2020/12/25 02:35:48.743 [D] [main.go:80]  这是 debug 
+2020/12/25 02:35:48.743 [C] [main.go:81]  这是 Critical 
+2020/12/25 02:35:48.744 [A] [main.go:82]  这是 Alert 
+2020/12/25 02:35:48.748 [I] [main.go:130]  OK
+2020/12/25 02:35:48.941 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:36:12.536 [I] [main.go:79]  这是info 
+2020/12/25 02:36:12.537 [D] [main.go:80]  这是 debug 
+2020/12/25 02:36:12.537 [C] [main.go:81]  这是 Critical 
+2020/12/25 02:36:12.537 [A] [main.go:82]  这是 Alert 
+2020/12/25 02:36:12.540 [I] [main.go:130]  OK
+2020/12/25 02:36:12.676 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:36:17.533 [I] [main.go:79]  这是info 
+2020/12/25 02:36:17.534 [D] [main.go:80]  这是 debug 
+2020/12/25 02:36:17.534 [C] [main.go:81]  这是 Critical 
+2020/12/25 02:36:17.534 [A] [main.go:82]  这是 Alert 
+2020/12/25 02:36:17.537 [I] [main.go:130]  OK
+2020/12/25 02:36:17.656 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:36:23.630 [I] [main.go:79]  这是info 
+2020/12/25 02:36:23.630 [D] [main.go:80]  这是 debug 
+2020/12/25 02:36:23.630 [C] [main.go:81]  这是 Critical 
+2020/12/25 02:36:23.631 [A] [main.go:82]  这是 Alert 
+2020/12/25 02:36:23.634 [I] [main.go:130]  OK
+2020/12/25 02:36:23.747 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:36:32.330 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     5.0007ms|   match|[44m GET     [0m /     r:/
+2020/12/25 02:41:59.172 [I] [main.go:79]  这是info 
+2020/12/25 02:41:59.172 [D] [main.go:80]  这是 debug 
+2020/12/25 02:41:59.173 [C] [main.go:81]  这是 Critical 
+2020/12/25 02:41:59.173 [A] [main.go:82]  这是 Alert 
+2020/12/25 02:41:59.175 [I] [main.go:130]  OK
+2020/12/25 02:41:59.311 [I] [asm_amd64.s:1374]  http server Running on http://:88
+2020/12/25 02:42:02.538 [D] [server.go:2843]  |            ::1|[42m 200 [0m|     6.0017ms|   match|[44m GET     [0m /     r:/

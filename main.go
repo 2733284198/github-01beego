@@ -10,6 +10,7 @@ import (
 	//_ "bee01/controllers"
 	_ "bee01/routers"
 	"encoding/gob"
+	"github.com/gomodule/redigo/redis"
 )
 
 func init() {
@@ -47,6 +48,24 @@ func setsession() {
 
 func TestModel() {
 	_ = models.Db.AutoMigrate(models.Article{})
+}
+
+func TRedis() {
+	conn, _ := redis.Dial("tcp", ":6379")
+
+	_ = conn.Send("set", "name1", "lisi1")
+	_ = conn.Send("mset", "age1", 11, "score", 101)
+
+	_ = conn.Flush()
+
+	reply, err := conn.Receive()
+	if err != nil {
+		logs.Warning("redis 设置内容错误")
+	}
+
+	logs.Info("===> redis ok")
+	logs.Info(reply)
+
 }
 
 func TestLog() {
@@ -110,6 +129,7 @@ func main() {
 	TestLog()
 	TestModel()
 	tmap()
+	TRedis()
 	beego.Run(":88")
 
 	//beego.Run()
