@@ -11,6 +11,7 @@ import (
 	_ "bee01/routers"
 	"encoding/gob"
 	"github.com/gomodule/redigo/redis"
+	//_ "github.com/go-redis/redis"
 )
 
 func init() {
