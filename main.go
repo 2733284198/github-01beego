@@ -12,6 +12,7 @@ import (
 	"encoding/gob"
 	"github.com/gomodule/redigo/redis"
 	//_ "github.com/go-redis/redis"
+	"github.com/hpcloud/tail"
 )
 
 func init() {
@@ -119,6 +120,13 @@ func tmap() {
 	fmt.Println(tags)
 }
 
+func Tlog() {
+	t, _ := tail.TailFile("./logs/test.log", tail.Config{Follow: true})
+	for line := range t.Lines {
+		fmt.Println(line.Text)
+	}
+}
+
 func main() {
 
 	//beego.Router("/user", &controllers.MainController{})
@@ -131,6 +139,7 @@ func main() {
 	TestModel()
 	tmap()
 	TRedis()
+	Tlog()
 	beego.Run(":88")
 
 	//beego.Run()
