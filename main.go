@@ -1,16 +1,19 @@
 package main
 
 import (
-	"bee01/models"
-	_ "bee01/models"
+	"encoding/gob"
 	"fmt"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	_ "github.com/astaxie/beego/session/redis"
+
+	"bee01/models"
+	_ "bee01/models"
+	"github.com/gomodule/redigo/redis"
+
 	//_ "bee01/controllers"
 	_ "bee01/routers"
-	"encoding/gob"
-	"github.com/gomodule/redigo/redis"
 	//_ "github.com/go-redis/redis"
 	"github.com/hpcloud/tail"
 )
@@ -140,6 +143,9 @@ func main() {
 	tmap()
 	TRedis()
 	Tlog()
+
+	//admin.StatisticsMap.GetMap(os.Stdout)
+
 	beego.Run(":88")
 
 	//beego.Run()

@@ -1,0 +1,14 @@
+# toml
+toml = "toml example"
+
+redis = "127.0.0.1:33000"
+
+[mysql]
+port = 3306
+host = "127.0.0.1"
+username = "root"
+password = "123456"
+ports = [5799,6029]
+[mysql.metric]
+host = "127.0.0.1"
+port = 2112
