@@ -59,6 +59,40 @@ func (c *MainController) Product() {
 	c.ServeJSON()
 }
 
+/* 二位map */
+func (c *MainController) Jj2() {
+
+	//var tags map[string] map[string] interface{}
+	//var tags map[string] map[string]string
+	//tags := make(map[string] map[string]string)
+
+	//tags := make(map[string] map[string]string)
+
+	//
+	//tags := make(map[string] map[string]string)
+	tags := make(map[string]map[string]interface{})
+
+	tags["err"] = make(map[string]interface{})
+	//tags["err"] = "jenny"
+	tags["err"]["code"] = "200"
+	tags["err"]["allpage"] = 2
+	tags["err"]["curpage"] = 10
+
+	//tags["no1"] = make(map[string]string)
+	tags["no1"] = make(map[string]interface{})
+	tags["no1"]["name"] = "jenny"
+	tags["no1"]["sex"] = "man"
+	tags["no1"]["address"] = "china"
+
+	//tags["no1"]["no1"] = {
+	//	"name":"n1",
+	//	"age":10,
+	//}
+
+	c.Data["json"] = tags
+	c.ServeJSON()
+}
+
 func (c *MainController) Jj1() {
 
 	var tags map[string]interface{}
