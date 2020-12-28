@@ -72,14 +72,15 @@ func tconfigtoml() {
 }
 
 func main() {
-	tpflag()
+	//tpflag()
+	main2()
 	//tconfigtoml()
 }
 
 func main2() {
 	viper.SetConfigName("config")
 	viper.SetConfigType("json")
-	viper.AddConfigPath("./01otherlibs")
+	viper.AddConfigPath("./01otherlibs/viper")
 	err := viper.ReadInConfig() //根据上面配置加载文件
 	if err != nil {
 		fmt.Println(err)
