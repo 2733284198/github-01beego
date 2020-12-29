@@ -8,9 +8,11 @@ import (
 	"github.com/astaxie/beego/logs"
 	_ "github.com/astaxie/beego/session/redis"
 
-	"bee01/models"
-	_ "bee01/models"
 	"github.com/gomodule/redigo/redis"
+
+	//"bee01/beegomodel"
+	_ "bee01/beegomodel"
+	"bee01/models"
 
 	//_ "bee01/controllers"
 	_ "bee01/routers"
@@ -130,6 +132,19 @@ func Tlog() {
 	}
 }
 
+/* gormt生成的：表，
+
+https://github.com/xxjwxc/gormt/blob/master/README_zh_cn.md
+*/
+
+func ttmodel() {
+
+	//beegomodel.UsersMgr().WithID(1)
+	//userTable := beegomodel.UsersMgr.GetTableName()
+
+	//fmt.Println("\n\n =====>ttmodel:UsersMgr: ",userTable)
+}
+
 func main() {
 
 	//beego.Router("/user", &controllers.MainController{})
@@ -141,12 +156,14 @@ func main() {
 	//TestLog()
 	//TestModel()
 	//tmap()
-	TRedis()
+	//TRedis()
 	//Tlog()
 
 	//admin.StatisticsMap.GetMap(os.Stdout)
 
 	//beego.Run(":8088")
+	//ttmodel()
+
 	beego.Run()
 
 	//beego.Run()

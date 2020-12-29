@@ -53,7 +53,7 @@ func initData() {
 
 	// 查询 person数据
 	/*
-		查询 person数据
+		========================= 查询 person数据 =========================
 	*/
 
 	var person Person
@@ -73,7 +73,8 @@ func initData() {
 	var person1all []Person
 	//engine.Where("id = ?", 1).Get(&person1)
 	//engine.Find(&person1all)
-	engine.OrderBy("age desc").Find(&person1all)
+	//engine.Cols("id","age").OrderBy("age desc").Find(&person1all)
+	engine.Cols("id, age").OrderBy("age desc").Find(&person1all)
 	fmt.Println("\n ====>person1all ", person1all)
 
 	//engine.Where("age = ?", 2).Get(&person1s)
@@ -95,6 +96,27 @@ func initData() {
 	var personSql []Person
 	engine.SQL("select * from person where age > 2 ").Find(&personSql)
 	fmt.Println("\n ====>personSql  ", personSql)
+
+	/*
+		========================= 插入数据 =========================
+	*/
+
+	personInsert := Person{
+		Age:  10,
+		Name: "name10",
+	}
+
+	//rowsNum, err := engine.Insert(&personInsert)
+	engine.Insert(&personInsert)
+
+	var personInserts []Person
+	//engine.ID(rowsNum).Get(&person)
+	engine.Where("age = ?", 10).Find(&personInserts)
+
+	//engine.Where("age = ?", 10).Count()
+	//fmt.Println("\n ====>personInsert  ", rowsNum, person1s)
+	fmt.Println("\n ====>personInsert  ", personInserts)
+
 }
 
 func getAllData() {
