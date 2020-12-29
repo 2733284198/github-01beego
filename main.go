@@ -138,15 +138,16 @@ func main() {
 	//getconfig()
 	//setsession()
 
-	TestLog()
-	TestModel()
-	tmap()
+	//TestLog()
+	//TestModel()
+	//tmap()
 	TRedis()
-	Tlog()
+	//Tlog()
 
 	//admin.StatisticsMap.GetMap(os.Stdout)
 
-	beego.Run(":88")
+	//beego.Run(":8088")
+	beego.Run()
 
 	//beego.Run()
 	// 关闭数据库连接
