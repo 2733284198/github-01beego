@@ -21,7 +21,7 @@ type Articles struct {
 	Content string
 }
 
-var engine *xorm.Engine
+//var engine *xorm.Engine
 
 func main() {
 	var err error
@@ -38,17 +38,17 @@ func main() {
 	fmt.Println(results)
 
 	// 生成表
-	//err := engine.Sync2(new(Articles))
-	//err := engine.Sync(new(Users))
+	//err := engine1.Sync2(new(Articles))
+	//err := engine1.Sync(new(Users))
 
 	var users []Users
-	//err := engine.Where("name = ?", name).And("age > 10").Limit(10, 0).Find(&users)
+	//err := engine1.Where("name = ?", name).And("age > 10").Limit(10, 0).Find(&users)
 
-	//err := engine.Find(&users)
+	//err := engine1.Find(&users)
 
 	//fmt.Println(users)
 
-	//engine.TableName("Users").find()
+	//engine1.TableName("Users").find()
 }
 
 func addlog() {
@@ -59,7 +59,7 @@ func addlog() {
 		return
 	}
 
-	engine.SetLogger(xorm.NewSimpleLogger(f))*/
+	engine1.SetLogger(xorm.NewSimpleLogger(f))*/
 
 	/*日志2*/
 	/*logWriter, err := syslog.New(syslog.LOG_DEBUG, "rest-xorm-example")
@@ -69,6 +69,6 @@ func addlog() {
 
 	logger := xorm.NewSimpleLogger(logWriter)
 	logger.ShowSQL(true)
-	engine.SetLogger(logger)*/
+	engine1.SetLogger(logger)*/
 
 }
