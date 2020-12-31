@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/gob"
 	"fmt"
+	_ "net/http"
+	_ "net/http/pprof"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
