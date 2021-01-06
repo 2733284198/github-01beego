@@ -17,6 +17,7 @@ require (
 	github.com/spf13/pflag v1.0.3
 	github.com/spf13/viper v1.7.1
 	github.com/tidwall/gjson v1.6.7
+	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 	gorm.io/driver/mysql v1.0.3
 	gorm.io/gorm v1.20.8
 	xorm.io/core v0.7.2-0.20190928055935-90aeac8d08eb
