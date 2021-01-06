@@ -82,7 +82,7 @@ func main() {
 	if err != nil {
 		log.Println("添加书失败:", "age:21-31")
 	} else {
-		log.Println("添加书成功:")
+		log.Println("添加书成功:", people)
 	}
 
 	// 查找所有书籍
