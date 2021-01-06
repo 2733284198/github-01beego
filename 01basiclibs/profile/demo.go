@@ -26,5 +26,7 @@ func main() {
 		}
 	}()
 
+	//str := make(map[string]string){"name":"manlan1"}
+
 	http.ListenAndServe("0.0.0.0:6060", nil)
 }
