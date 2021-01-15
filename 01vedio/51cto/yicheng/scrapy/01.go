@@ -56,7 +56,23 @@ func getFile() {
 	*/
 	//reg := regexp.MustCompile(`qr[a-z]+[1-9][a-z]*`)
 	//reg := regexp.MustCompile(`qr[a-z]+[1-9][a-z]*`)
-	reg := regexp.MustCompile(`[qr]*[a-z]+[1-9][a-z]*`)
+	//reg := regexp.MustCompile(`[qr]*[a-z]+[1-9][a-z]*`)
+	// 手机号码
+	//reg := regexp.MustCompile(`1[3-9]\d{9}`)
+
+	/*
+		<ul>
+		        <li> --- 10 位</li>
+		        <li>13104884551</li>
+		        <li>18104884552</li>
+
+		        <li> --- 11 位</li>
+		        <li>131048845532</li>
+		    </ul>
+	*/
+
+	// 12的，手机号，没有处理
+	reg := regexp.MustCompile(`1[3456789]\d{9}`)
 	//reg := regexp.MustCompile(`qr[a-z]+[1-9][a-z]*`)
 
 	//reg = regexp.MustCompile(`\Qqrcode\E`)
