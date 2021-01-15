@@ -19,9 +19,50 @@ func getFile() {
 		// handle error
 	}
 	defer resp.Body.Close()
+
+	// 读取全部数据，到 []bytes，转换为 string(bytes)
 	body, err := ioutil.ReadAll(resp.Body)
 
 	fmt.Println(string(body))
+
+	// 查找字符串
+	html := string(body)
+
+	//reg := regexp.MustCompile(`qrcode`)
+
+	//compilestr := `[a-z]+`
+	//compilestr := `\Qqrcode\E`
+	//compilestr := `(?i:^qr).*Go`
+	//compilestr := `^qr*`
+
+	//reg := regexp.MustCompile(compilestr)
+
+	//reg := regexp.MustCompile(`\Qqrcode\E`)
+	//reg = regexp.MustCompile(`(?i:^hello).*Go`)
+	// 查找 Hello 或 Go，替换为 Hellooo、Gooo
+	//reg := regexp.MustCompile(`\w+`)
+
+	/*
+		<ul>
+		        <li>qrcode1</li>
+		        <li>qrcode2</li>
+		        <li>qrcode3</li>
+		        <li>qrcode4</li>
+		        <li>qrcode5</li>
+
+		        <li>qrcode6a</li>
+		    </ul>
+
+	*/
+	//reg := regexp.MustCompile(`qr[a-z]+[1-9][a-z]*`)
+	//reg := regexp.MustCompile(`qr[a-z]+[1-9][a-z]*`)
+	reg := regexp.MustCompile(`[qr]*[a-z]+[1-9][a-z]*`)
+	//reg := regexp.MustCompile(`qr[a-z]+[1-9][a-z]*`)
+
+	//reg = regexp.MustCompile(`\Qqrcode\E`)
+	//reg := regexp.MustCompile(`小米`)
+
+	fmt.Printf("%q\n", reg.FindAllString(html, -1))
 }
 
 func printbaidu() {

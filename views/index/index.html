@@ -11,8 +11,29 @@
 
     <br>
     <h3> qrcode </h3>
-    {{ .png }}
-    <img src="{{.png}}">
+
+    <pre>
+
+
+    //reg := regexp.MustCompile(`qr[a-z]+[1-9][a-z]*`)
+    //reg := regexp.MustCompile(`qr[a-z]+[1-9][a-z]*`)
+    reg := regexp.MustCompile(`[qr]*[a-z]+[1-9][a-z]*`)
+
+     </pre>
+
+    <ul>
+        <li>qrcode1</li>
+        <li>qrcode2</li>
+        <li>qrcode3</li>
+        <li>qrcode4</li>
+        <li>qrcode5</li>
+
+        <li>qrcode6a</li>
+        <li>aqrcode6a</li>
+    </ul>
+
+{{/*    {{ .png }}*/}}
+{{/*    <img src="{{.png}}">*/}}
     
 </body>
 </html>
