@@ -6,7 +6,7 @@ require (
 	github.com/astaxie/beego v1.12.3
 	github.com/bitly/go-simplejson v0.5.0
 	github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869 // indirect
-	github.com/divan/gotrace v0.0.0-20160720144702-224c6918bf75 // indirect
+	github.com/go-echarts/go-echarts/v2 v2.2.3
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/go-xorm/xorm v0.7.9
 	github.com/gocolly/colly/v2 v2.1.0
