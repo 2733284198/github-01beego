@@ -8,9 +8,11 @@ import (
 )
 
 func main() {
-	learn1()
-	printbaidu()
-	getFile()
+	//learn1()
+	//printbaidu()
+	//getFile()
+
+	getemail()
 }
 
 func getFile() {
@@ -73,6 +75,36 @@ func getFile() {
 
 	// 12的，手机号，没有处理
 	reg := regexp.MustCompile(`1[3456789]\d{9}`)
+	//reg := regexp.MustCompile(`qr[a-z]+[1-9][a-z]*`)
+
+	//reg = regexp.MustCompile(`\Qqrcode\E`)
+	//reg := regexp.MustCompile(`小米`)
+
+	fmt.Printf("%q\n", reg.FindAllString(html, -1))
+}
+
+// 邮箱
+func getemail() {
+
+	//	 https://tieba.baidu.com/p/1096024358?red_tag=2593530307
+
+	resp, err := http.Get("http://localhost:9091/")
+	if err != nil {
+		// handle error
+	}
+	defer resp.Body.Close()
+
+	// 读取全部数据，到 []bytes，转换为 string(bytes)
+	body, err := ioutil.ReadAll(resp.Body)
+
+	fmt.Println(string(body))
+
+	// 查找字符串
+	html := string(body)
+
+	// 12的，手机号，没有处理
+	// ["123213@qq.com" "qdasfsad@163.com"]
+	reg := regexp.MustCompile(`([a-z]*[1-9]*)(@)[a-z]*[1-9]*(.com)`)
 	//reg := regexp.MustCompile(`qr[a-z]+[1-9][a-z]*`)
 
 	//reg = regexp.MustCompile(`\Qqrcode\E`)
