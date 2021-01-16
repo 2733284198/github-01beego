@@ -16,6 +16,7 @@ require (
 	github.com/kr/pretty v0.2.1 // indirect
 	github.com/mattn/go-gtk v0.0.0-20191030024613-af2e013261f5
 	github.com/mattn/go-pointer v0.0.1 // indirect
+	github.com/robfig/cron v1.2.0
 	github.com/salviati/go-qt5 v0.0.0-20170401220645-c40459ebb578
 	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
 	github.com/smartystreets/goconvey v1.6.4
@@ -25,6 +26,7 @@ require (
 	github.com/ying32/dylib v0.0.0-20201022102751-7144b101e107 // indirect
 	github.com/ying32/govcl v2.0.9+incompatible
 	github.com/ying32/liblclbinres v0.0.0-20210106070124-c1ab35f34f5c // indirect
+	go.uber.org/ratelimit v0.1.0
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 	gorm.io/driver/mysql v1.0.3
 	gorm.io/gorm v1.20.8
