@@ -5,31 +5,53 @@ import (
 	"sync"
 )
 
-//var a []int
+var a int
 var b chan int
 var wg sync.WaitGroup
 
-func main() {
-	//fmt.Println(b)
+func nobufChannel() {
 
-	//b = make(chan int)
-	b = make(chan int, 2)
+	b = make(chan int, 1)
+	//b = make(chan int, 2)
+
+	b <- 10
+	fmt.Println("10发到通道b", b)
+	// 一个通道，没有取出，会有问题。
+	//b <- 20
+
+	x := <-b
+	fmt.Println("x取到值", x)
+
+}
+
+func nobufchannel() {
+
+	//fmt.Println(b)
+	b = make(chan int, 1)
+	//b = make(chan int, 2)
 	//b <- 10
+
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
 
 		x := <-b
+		// 1. fmt.println：2个谁先跑完。先后顺序不一定的，
 		fmt.Println("后台取到了通道b", x)
 	}()
 
 	b <- 10
+	// 1. fmt.println：2个谁先跑完
 	fmt.Println("10发到后面通道b")
 	//b = make(chan int, 16)
 
 	fmt.Println(b)
 	wg.Wait()
-	//fmt.Println(b)
+}
+
+func main() {
+	//nobuf()
+	nobufChannel()
 }
 
 func goprint() {
