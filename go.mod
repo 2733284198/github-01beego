@@ -27,6 +27,7 @@ require (
 	github.com/ying32/govcl v2.0.9+incompatible
 	github.com/ying32/liblclbinres v0.0.0-20210106070124-c1ab35f34f5c // indirect
 	go.uber.org/ratelimit v0.1.0
+	golang.org/x/tools v0.0.0-20191112195655-aa38f8e97acc
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 	gorm.io/driver/mysql v1.0.3
 	gorm.io/gorm v1.20.8
