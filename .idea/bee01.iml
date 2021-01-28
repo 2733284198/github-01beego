@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$/../0-go/1-qianfeng/1-basic" />
     <content url="file://$MODULE_DIR$" />
     <content url="file://$MODULE_DIR$/../beego/beeOrm01" />
+    <content url="file://$MODULE_DIR$/../micro/greet" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
