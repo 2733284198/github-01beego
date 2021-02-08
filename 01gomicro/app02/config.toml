@@ -1,0 +1,18 @@
+[jupiter.server.http]
+    port = 8000
+
+[jupiter.server.governor]
+    port = 8001
+
+[jupiter.logger.default]
+    debug = true
+    enableConsole = true
+
+[jupiter.mysql.test]
+   connMaxLifetime = "300s"
+   debug = true
+   dsn = "root:root@tcp(127.0.0.1:3306)/go?charset=utf8&parseTime=True&loc=Local&readTimeout=1s&timeout=1s
+   &writeTimeout=3s"
+   level = "panic"
+   maxIdleConns = 50
+   maxOpenConns = 100
